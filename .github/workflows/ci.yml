@@ -34,13 +34,7 @@ jobs:
 
       - name: Check Python syntax
         run: |
-          "$(uv python find)" -m compileall -q \
-            main.py \
-            research_agent.py \
-            research_langchain.py \
-            rag_search.py \
-            run_agentic.py \
-            run_langgraph.py
+          "$(uv python find)" -m compileall -q src tests
 
       - name: Run unit tests
         run: uv run --frozen python -m pytest -q
