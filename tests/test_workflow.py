@@ -1,8 +1,8 @@
 
 import pytest
 
-import run_langgraph as workflow_module
-from main import BrochureReview, SocialPost
+from brochure_generator import run_langgraph as workflow_module
+from brochure_generator.main import BrochureReview, SocialPost
 
 
 @pytest.mark.parametrize(

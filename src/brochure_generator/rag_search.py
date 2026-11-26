@@ -5,7 +5,7 @@ import torch
 from sentence_transformers import SentenceTransformer
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from main import ROOT
+from brochure_generator.main import ROOT
 
 SOURCE_FILE = ROOT / "research_sources.md"
 

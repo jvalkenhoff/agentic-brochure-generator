@@ -14,13 +14,13 @@ from playwright.sync_api import (
 )
 
 # sets root
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 MODEL = "gpt-4.1-mini"
 
 # website you want to fetch
 WEBSITE = {
-  "Name": "",
-  "URL": ""
+  "Name": "Enginia",
+  "URL": "https://enginia.nl/"
 }
 
 OUTPUT_PATH = ROOT / "brochure.md"
