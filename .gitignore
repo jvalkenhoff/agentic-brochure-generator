@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local cache / storage
+.cache/
+.huggingface/
+storage/
+
+# Generated application outputs
+research.md
+research_sources.md
+rag_context.md
+brochure*.md
+linkedin*.md
+review*.json
+workflow.mmd
+
+# Operating system and IDE
+.DS_Store
+Thumbs.db

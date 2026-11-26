@@ -1,0 +1,19 @@
+[project]
+name = "agentic-brochure-generator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.5.2",
+    "langchain-openai>=1.8.5",
+    "langchain-text-splitters>=1.2.0",
+    "langgraph>=1.2.24",
+    "openai>=3.60.0",
+    "playwright>=1.65.2",
+    "pydantic>=2.14.4",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+    "sentence-transformers>=6.3.0",
+    "torch>=2.15.0",
+]
