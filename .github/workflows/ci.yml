@@ -41,3 +41,6 @@ jobs:
             rag_search.py \
             run_agentic.py \
             run_langgraph.py
+
+      - name: Run unit tests
+        run: uv run --frozen python -m pytest -q
