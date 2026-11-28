@@ -1,8 +1,8 @@
 from openai import OpenAI
-from brochure_generator.research_langchain import research_company_langchain
+from research_langchain import research_company_langchain
 from sentence_transformers import SentenceTransformer
 
-from brochure_generator.main import (
+from main import (
   ROOT,
   WEBSITE,
   get_api_key,
@@ -11,7 +11,7 @@ from brochure_generator.main import (
   run_editorial_workflow
 )
 
-from brochure_generator.rag_search import (
+from rag_search import (
   EMBEDDING_MODEL,
   create_chunks,
   create_embeddings,

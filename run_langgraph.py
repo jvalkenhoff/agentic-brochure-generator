@@ -3,7 +3,7 @@ from typing import Literal, TypedDict
 from langgraph.graph import END, START, StateGraph
 from openai import OpenAI
 
-from brochure_generator.main import (
+from main import (
   ROOT,
   WEBSITE,
   MAX_REVISIONS,
@@ -17,8 +17,8 @@ from brochure_generator.main import (
   revise_brochure
 )
 
-from brochure_generator.research_langchain import research_company_langchain
-from brochure_generator.run_agentic import retrieve_brochure_context
+from research_langchain import research_company_langchain
+from run_agentic import retrieve_brochure_context
 
 class BrochureState(TypedDict, total=False):
   name: str
