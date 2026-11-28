@@ -1,43 +1,32 @@
-
-name: CI
+name: Python syntax
 
 on:
   push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
 
 permissions:
   contents: read
 
 jobs:
-  static-checks:
-    name: Python validation
+  syntax:
+    name: Python syntax validation
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v10.4.0
+      - name: Set up Python
+        uses: actions/setup-python@v6.1.0
         with:
-          enable-cache: true
-
-      - name: Install Python
-        run: uv python install
-
-      - name: Validate dependency lockfile
-        run: uv lock --check
+          python-version: "3.13"
 
       - name: Check Python syntax
         run: |
-          "$(uv python find)" -m compileall -q \
+          python -m compileall -q \
             main.py \
+            rag_search.py \
             research_agent.py \
             research_langchain.py \
-            rag_search.py \
             run_agentic.py \
             run_langgraph.py
