@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from openai import OpenAI
 from playwright.sync_api import sync_playwright, Page
 
-from brochure_generator.main import (
+from main import (
   MODEL,
   ROOT,
   WEBSITE,

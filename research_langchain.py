@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 from playwright.sync_api import sync_playwright
 from sentence_transformers import SentenceTransformer
 
-from brochure_generator.main import(
+from main import(
   MODEL,
   ROOT,
   WEBSITE,
@@ -19,14 +19,14 @@ from brochure_generator.main import(
   is_same_site,
 )
 
-from brochure_generator.rag_search import (
+from rag_search import (
   EMBEDDING_MODEL,
   create_chunks,
   create_embeddings,
   semantic_search,
 )
 
-from brochure_generator.research_agent import SP_RESEARCH, MAX_TOOL_CALLS
+from research_agent import SP_RESEARCH, MAX_TOOL_CALLS
 
 # ask chatgpt to generate this
 SP_AGENTIC_RESEARCH = SP_RESEARCH + """
